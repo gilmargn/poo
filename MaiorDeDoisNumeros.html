@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Exercício 1</title>
-    </head>
-    <body>
-        <script>
-            let num1, num2;
-          num1 = parseInt(prompt("Digite um número"));
-          num2 = parseInt(prompt("Digite outro número"));
-          
-        </script>
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Maior de Dois números</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        let num1, num2;
+        num1 = parseInt(prompt("Digite um número"));
+        num2 = parseInt(prompt("Digite outro número"))
+
+        function maiorDeDoisNumeros(num1,num2){
+           // return Math.max(num1,num2);
+           // let iguais = "Números iguais"
+            if(num1>num2){
+                return num1;
+            }
+            else if(num1==num2){
+                num1 = "Números iguais" 
+                return num1;
+            }
+            else
+                return num2; 
+        }
+        document.write("Maior de dois números: " + maiorDeDoisNumeros(num1,num2));
+
+
+    </script>
+</body>
 </html>
