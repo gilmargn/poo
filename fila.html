@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fila em Javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        //https://bognarjunior.wordpress.com/2018/01/24/fila-e-pilha-com-javascript/
+        var fila = [];
+        do{
+        var op = prompt("Digite uma opção:\n0. Vazio\n1. Cheio\n 2. Inserir\n 3. Remover\n 4.Mostrar \n-1 Para sair")
+         switch(op){
+            case '0': alert("vazio");break;
+            case '1': alert("cheio");break;
+            case '2': var number = prompt("digite um número");
+                fila.push(number);
+                console.log(fila);
+            break;
+            case '3': document.write(fila);
+                fila.shift();
+                break;
+            case '4':document.write(fila);break;
+            case '-1': alert("Tchau"); break;
+            default: alert("Opção inválida");
+        } 
+       
+    }while(op!='-1');
+        
+        /*fila.shift();
+
+        fila.push(4);
+        console.log(fila);
+
+        fila.shift();
+       fila.shift();
+       console.log(fila);*/
+    </script>
+</body>
+</html>

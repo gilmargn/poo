@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vetores</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        const numeros=[];
+        let tamanho = prompt("Digite o tamanho do vetor");
+        for(let i=0; i<tamanho; i++){
+            let inserir = prompt("Número: ");
+            numeros[i] = inserir;
+        }
+        document.write("<br>")
+        for(let i=0; i<tamanho;i++){
+            document.write(numeros[i]+ " ,");
+        }
+       
+       /* function somarnumeros(...numeros){
+            let total = 0;
+            for(let i of numeros){
+                total += i;
+            }
+            return total;
+        }
+        document.write(somarnumeros(...numeros));
+        for(let i=0;i<vetor.length;i++){
+            document.write( i + ": " + vetor[i] + "<br>")
+            soma+=vetor[i];
+        }
+            document.write("<br>Soma total vetor: " + soma);
+        */
+    </script>
+</body>
+</html>
