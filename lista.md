@@ -20,9 +20,9 @@ Fila de jogadores de futebol
 
 Fila de restaurante - self-service
 
-Ivanete
-Matheus
-Antônio Marcio
+- Ivanete
+- Matheus
+- Antônio Marcio
 
 
 Lista de aprovados de informática no IFAM
