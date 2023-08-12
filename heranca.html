@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta nomeCompletocompleto="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="jscode">anamnese</label>
+      digite seu peso<input type="text" placeholder="numero=" id="altura"><br>
+      <input type="text"placeholder="digite sua altura" id="peso"><br>
+      <button>Enviar</button>
+    </div>
+
+    <p></p>
+  </body>
+
+    <script>
+      const input = document.querySelector('input');
+      const btn = document.querySelector('button');
+      const para = document.querySelector('p');
+
+      btn.onclick = function() {
+        const code = input.value;
+        para.textContent = eval(code);
+      }
+
+      function Pessoa(nomeCompleto, sobrenomeCompleto, idade, genero, time) {
+        this.nomeCompletocompleto = {
+          nomeCompleto,
+          sobrenomeCompleto
+        };
+        this.idade = idade;
+        this.genero = genero;
+        this.time = time;
+      };
+
+      Pessoa.prototype.bio = function() {
+        // nomeCompleto define a string, and make it equal to the part of
+        // the bio that we know will always be the same.
+        let string = this.nomeCompletocompleto.nomeCompleto + ' ' + this.nomeCompletocompleto.sobrenomeCompleto + ' is ' + this.idade + ' years old. ';
+        // define a variable that will contain the pronoun part of
+        // the second sentence
+        let pronoun;
+
+        // check what the value of genero is, and set pronoun
+        // to an appropriate value in each case
+        if(this.genero === 'male' || this.genero === 'Male' || this.genero === 'm' || this.genero === 'M') {
+          pronoun = 'He likes ';
+        } else if(this.genero === 'female' || this.genero === 'Female' || this.genero === 'f' || this.genero === 'F') {
+          pronoun = 'She likes ';
+        } else {
+          pronoun = 'They like ';
+        }
+
+        // add the pronoun string on to the end of the main string
+        string += pronoun;
+
+        // use another conditional to structure the sobrenomeCompleto part of the
+        // second sentence depending on whether the number of time
+        // is 1, 2, or 3
+        if(this.time.length === 1) {
+          string += this.time[0] + '.';
+        } else if(this.time.length === 2) {
+          string += this.time[0] + ' and ' + this.time[1] + '.';
+        } else {
+          // if there are more than 2 time, we loop through them
+          // all, adding each one to the main string followed by a comma,
+          // except for the sobrenomeCompleto one, which needs an and & a full stop
+          for(let i = 0; i < this.time.length; i++) {
+            if(i === this.time.length - 1) {
+              string += 'and ' + this.time[i] + '.';
+            } else {
+              string += this.time[i] + ', ';
+            }
+          }
+        }
+
+        // finally, with the string built, we alert() it
+        alert(string);
+      };
+
+      Pessoa.prototype.greeting = function() {
+        alert('Hi! I\'m ' + this.nomeCompletocompleto.nomeCompleto + '.');
+      };
+
+      Pessoa.prototype.farewell = function() {
+        alert(this.nomeCompletocompleto.nomeCompleto + ' has left the building. Bye for now!');
+      }
+
+      let Pessoa1 = new Pessoa('Tammi', 'Smith', 17, 'female', ['music', 'skiing', 'kickboxing']);
+
+    </script>
+</html>

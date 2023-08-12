@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>this.html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+       var person = {
+    primeiroNome : "isaias",
+    sobreNome  : "tranzao",
+    fullName  : function() {
+        // Notou o uso do "this" tal como se usou "ele" no exemplo da frase anterior?
+        console.log( this.primeiroNome + ' ' + this.sobreNome );
+
+        // Também poderia se ter escrito:
+        console.log( person.primeiroNome + ' ' + person.sobreNome );
+    }
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
